@@ -1,0 +1,21 @@
+{
+  "band_name": "Kessoku Band",
+  "member":[
+    {
+      "name": "Nijika",
+      "age": 17
+    },
+    {
+      "name": "Ryo",
+      "age": 16
+    },
+    {
+      "name": "Hitori",
+      "age": 15
+    },
+    {
+      "name": "Ikuyo",
+      "age": 16
+    }
+  ]
+}
