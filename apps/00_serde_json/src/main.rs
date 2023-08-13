@@ -30,7 +30,7 @@ fn main() {
     match json_sample {
         Ok(o) => {
             println!("Success to perse BABEL");
-            println!("    {}, (height: {}m)", o.name, o.height);
+            println!("    {} (height: {}m)", o.name, o.height);
         }
         Err(e) => {
             println!("Failed to perse BABEL");

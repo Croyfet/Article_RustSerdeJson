@@ -27,6 +27,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Display json
     println!("{}", json);
+    println!("");
 
     let target_member: &Value = &json["band"][0]["member"][3];
     if target_member.is_null() {
@@ -46,8 +47,35 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("\"Kita-ikuyo-tte-ahoka-i\"");
     println!("Fix : {} -> {}", target_name, new_name);
 
-    // Insert new name
+    // Modify name
     *target_name = Value::String(new_name);
+
+    // Display json
+    println!("{}", json);
+    println!("");
+
+    // Display new name 2
+    let new_name_2: String = String::from("Hitori");
+    println!("\"Goto sa...\"");
+    println!("Fix : {} -> {}", json["band"][0]["member"][2]["name"], new_name_2);
+
+    // Modify name
+    json["band"][0]["member"][2]["name"] = Value::String(new_name_2);
+
+    // Display json
+    println!("{}", json);
+    println!("");
+
+    // Insert
+    println!("Insert instrument");
+    let instrument = "Guiter".to_string();
+
+    json["band"][0]["member"][2]["instrument"] = Value::String(instrument.clone());
+
+    let target_member: Option<&mut serde_json::Map<String, Value>> = json["band"][0]["member"][3].as_object_mut();
+    if let Some(s) = target_member {
+        s.insert(String::from("instrument"), instrument.clone().into());
+    }
 
     // Display json
     println!("{}", json);

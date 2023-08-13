@@ -4,8 +4,8 @@ use std::{fs::File, io::BufReader};
 
 const FILE_PATH: &str = "../resource/babel.json";
 // {
-//   "number": 10,
-//   "comment": "Hello World"
+//     "name": "Enoshima Sea Candle",
+//     "height": 60
 // }
 
 #[allow(dead_code)] // Not use in this script
