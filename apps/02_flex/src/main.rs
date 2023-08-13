@@ -41,7 +41,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("  member");
 
     for i in json.member.iter() {
-        println!("  - {:<8} ({})", i.name, i.age);
+        println!("    - {:<8} ({})", i.name, i.age);
     }
 
     Ok(())
